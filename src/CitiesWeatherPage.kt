@@ -5,8 +5,13 @@ class CitiesWeatherPage(private val presenter: CityContract.Presenter) : CityCon
 
     private val loader = document.getElementById("loader") as HTMLDivElement
     private val content = document.getElementById("content") as HTMLDivElement
+    private val cardBuilder = CardBuilder()
 
     override fun showCities(cities: List<City>) {
+        cities.forEach { city ->
+            val card = cardBuilder.build(city)
+            content.appendChild(card)
+        }
     }
 
     override fun showLoader() {
@@ -15,5 +20,10 @@ class CitiesWeatherPage(private val presenter: CityContract.Presenter) : CityCon
 
     override fun hideLoader() {
         loader.style.visibility = "hidden"
+    }
+
+    fun show() {
+        presenter.attach(this)
+        presenter.loadCities()
     }
 }

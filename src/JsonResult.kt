@@ -1,0 +1,1 @@
+data class JsonResult(val list: String)

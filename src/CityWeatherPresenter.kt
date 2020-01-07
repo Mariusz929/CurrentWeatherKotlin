@@ -16,7 +16,10 @@ class CityWeatherPresenter : CityContract.Presenter {
             val cities = ArrayList<City>()
             cityJSONList.forEach {
                 val main = JSON.parse<MainParams>(JSON.stringify(it.main))
-                cities.add(City(it.name, main))
+                val weatherJsonList = JSON.parse<Array<WeatherJSON>>(JSON.stringify(it.weather))
+                val weather = JSON.parse<Weather>(JSON.stringify(weatherJsonList[0]))
+                cities.add(City(it.name, main, weather))
+                println(weather.description)
             }
             view.hideLoader()
             view.showCities(cities.toList())

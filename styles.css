@@ -47,7 +47,7 @@ body {
     height: 46px;
     color: #fff;
     font-size: 24px;
-    background-color: #19d276;
+    background-color: #3acdd6;
     text-align: left;
     z-index: 1;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.28);
@@ -64,12 +64,12 @@ body {
 }
 
 .cover-image {
-    height: 202px;
-    width: 262px;
+    height: 150px;
+    width: 150px;
 }
 
 .card {
-    background: #37ad4d;
+    background: #6ec5ca;
     border-radius: 2px;
     display: inline-block;
     height: 390px;
@@ -85,7 +85,7 @@ body {
 }
 
 .card-shadow:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 14px 28px rgb(249, 255, 90), 0 10px 10px rgb(255, 205, 2);
 }
 
 .text-name {
@@ -104,9 +104,17 @@ body {
 .text-feels {
     color: #fff;
     font-size: 20px;
-    margin-top: 7px;
+    margin-top: 2px;
     margin-bottom: 7px;
     text-align: left;
+}
+
+.text-description {
+    color: #fff;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 7px;
+    text-align: center;
 }
 
 .text-humidity {
